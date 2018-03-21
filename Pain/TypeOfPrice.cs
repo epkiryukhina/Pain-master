@@ -12,32 +12,28 @@
 namespace Pain
 {
 
-    using System;
+using System;
     using System.Collections.Generic;
+    
+public partial class TypeOfPrice
+{
 
-    public partial class TypeOfPrice
+    public TypeOfPrice()
     {
 
-        public TypeOfPrice()
-        {
-
-            this.TypeOfService = new HashSet<TypeOfService>();
-
-        }
-
-
-        public int Id { get; set; }
-
-        public string Type { get; set; }
-
-        public virtual ICollection<TypeOfService> TypeOfService { get; set; }
-
-        public override string ToString()
-        {
-            return Type;
-        }
+        this.TypeOfService = new HashSet<TypeOfService>();
 
     }
 
+
+    public int Id { get; set; }
+
+    public string Type { get; set; }
+
+
+
+    public virtual ICollection<TypeOfService> TypeOfService { get; set; }
+
 }
 
+}
