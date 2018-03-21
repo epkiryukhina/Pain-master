@@ -73,7 +73,7 @@ namespace Pain
                 ((from a in db.PersonSet where (a.Id == currentEmployee.Id) select a).ToList()[0] as Employee).TypeOfService = ts;
             }
 
-            if (textBox3.Text != null)
+            if (textBox3.Text != "")
             {
                 (from a in db.PersonSet where a.Id == currentEmployee.Id select a).ToList()[0].Password = textBox3.Text;
                 textBox3.Clear();
